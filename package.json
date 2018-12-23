@@ -1,0 +1,16 @@
+{
+  "name": "blockchain-rest-api",
+  "version": "1.0.0",
+  "description": "In this exercise you will practice a creation of a web service that respond with the block hash.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "hapi": "^17.8.1",
+    "level": "^4.0.0"
+  }
+}
