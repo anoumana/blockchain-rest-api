@@ -55,11 +55,12 @@ class BlockController {
             method: 'POST',
             path: '/api/block',
             handler: (request, h) => {
-                var payload = request.payload   // <-- this is the important line
+                var payload = request.payload   
+                if(payload == null){ return "Please include block data"};
                 if(payload.data !== ""){
                     let newBlock = new BlockClass.Block(payload.data)
                     return this.blockChain.addBlock(newBlock).then(function(value){
-                        console.log("add block + " + value);
+                        console.log("add block + " + payload.data);
                         if( value !== null) {
                             //let blockValue = JSON.stringify(value);
                             return value;
